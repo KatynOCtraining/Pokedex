@@ -39,7 +39,7 @@ function displayPokemonNames() {
       spriteImage.alt = `Sprite de ${pokemon.name.fr}`;
       spriteImage.className = "pokemon-sprite";
 
-      const pokemonName = document.createElement("p");
+      const pokemonName = document.createElement("h2");
       pokemonName.textContent = pokemon.name.fr;
 
       card.appendChild(spriteImage);
