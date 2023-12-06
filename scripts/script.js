@@ -1,5 +1,11 @@
 function fetchAndStorePokemonData() {
-  fetch("https://tyradex.vercel.app/api/v1/gen/1")
+  fetch("https://tyradex.vercel.app/api/v1/gen/1", {
+    headers: {
+      "User-Agent": "decker.thomas2911@gmail.com",
+      From: "https://katynoctraining.github.io/Pokedex/",
+      "Content-Type": "application/json",
+    },
+  })
     .then((response) => {
       if (!response.ok) {
         console.error(`Erreur HTTP: ${response.status}`);
