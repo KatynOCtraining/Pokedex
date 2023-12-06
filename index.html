@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dhurjati&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <script src="scripts/script.js" defer></script>
@@ -19,6 +19,20 @@
       >Ce site est réalisé avec
       <a href="https://tyradex.vercel.app">l'API Tyradex</a></span
     >
+
+    <section class="tri">
+      <button onclick="resetAndDisplayPokemons()">Ordre Pokédex</button>
+      <button onclick="sortAndDisplayPokemons('hp')">Tri par HP</button>
+      <button onclick="sortAndDisplayPokemons('atk')">Tri par Attaque</button>
+      <button onclick="sortAndDisplayPokemons('def')">Tri par Défense</button>
+      <button onclick="sortAndDisplayPokemons('spe_atk')">
+        Tri par Attaque Spéciale
+      </button>
+      <button onclick="sortAndDisplayPokemons('spe_def')">
+        Tri par Défense Spéciale
+      </button>
+      <button onclick="sortAndDisplayPokemons('vit')">Tri par Vitesse</button>
+    </section>
 
     <div id="pokemonList"></div>
     <div id="pokemonModal" class="modal">

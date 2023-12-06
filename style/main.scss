@@ -1,3 +1,7 @@
+@import "_modale.scss";
+@import "_button.scss";
+@import "_mediaquerries.scss";
+
 * {
   padding: 0;
   margin: 0;
@@ -8,12 +12,18 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  font-family: "Dhurjati";
+  background: #3362ae;
 }
-
+h1 {
+  font-size: 50px;
+  color: white;
+}
 h2 {
   font-family: "Press Start 2P";
   font-size: smaller;
 }
+
 #pokemonList {
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +32,6 @@ h2 {
 }
 
 .pokemon-card {
-  border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
@@ -30,16 +39,18 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 150px;
-}
+  border: 5px solid #fdee00;
 
-.pokemon-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.2);
+  }
 
-.pokemon-sprite {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  .pokemon-sprite {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
 }
 
 .modal {
@@ -47,32 +58,32 @@ h2 {
   position: fixed;
   z-index: 1;
   left: 0;
-  top: -100px;
+  top: 0;
   width: 100%;
-  height: 150%;
+  height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-}
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 5px solid #fdee00;
-  width: 80%;
-  border-radius: 25px;
-}
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 5px solid #fdee00;
+    width: 60%;
+    border-radius: 25px;
+  }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    &:hover,
+    &:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
 }

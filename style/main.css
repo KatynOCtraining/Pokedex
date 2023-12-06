@@ -1,3 +1,31 @@
+.card_content {
+  margin: 0% 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+button {
+  width: 10%;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+button:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+
+@media (max-width: 1124px) {
+  button {
+    width: 25%;
+  }
+  .card_content {
+    margin: 0% 5%;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +36,13 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  font-family: "Dhurjati";
+  background: #3362ae;
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
 }
 
 h2 {
@@ -23,7 +58,6 @@ h2 {
 }
 
 .pokemon-card {
-  border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
@@ -31,13 +65,13 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 150px;
+  border: 5px solid #fdee00;
 }
-
 .pokemon-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.2);
 }
-
-.pokemon-sprite {
+.pokemon-card .pokemon-sprite {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
@@ -48,31 +82,27 @@ h2 {
   position: fixed;
   z-index: 1;
   left: 0;
-  top: -100px;
+  top: 0;
   width: 100%;
-  height: 150%;
+  height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
-
-.modal-content {
+.modal .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5% auto;
   padding: 20px;
   border: 5px solid #fdee00;
-  width: 80%;
+  width: 60%;
   border-radius: 25px;
 }
-
-.close {
+.modal .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
-.close:hover,
-.close:focus {
+.modal .close:hover, .modal .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;

@@ -1,0 +1,11 @@
+button {
+  width: 10%;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background-color: aqua;
+    cursor: pointer;
+  }
+}
